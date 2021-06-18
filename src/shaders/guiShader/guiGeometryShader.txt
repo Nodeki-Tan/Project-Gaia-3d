@@ -1,0 +1,28 @@
+#version 150
+
+layout ( points ) in;
+layout ( triangle_strip, max_vertices = 4 ) out;
+
+out vec2 textureCoords;
+
+uniform mat4 projectionViewMatrix;
+
+void createVertex(vec3 offset, vec2 uv){
+	vec4 actualOffset = vec4(offset, 0.0);
+	vec4 worldPosition = gl_in[0].gl_Position + actualOffset;
+	gl_Position = projectionViewMatrix * worldPosition;
+	
+	textureCoords = uv;
+	EmitVertex();
+}
+
+void main(void){
+
+	createVertex(vec3(0.0, 0.0, 0.0), vec2(0,0));
+	createVertex(vec3(0.0, -1.0, 0.0), vec2(0,1));
+	createVertex(vec3(1.0, 0.0, 0.0), vec2(1,0));
+	createVertex(vec3(1.0, -1.0, 0.0), vec2(1,1));
+	
+	EndPrimitive();
+
+}

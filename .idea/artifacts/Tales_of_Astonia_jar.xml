@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tales-of-Astonia:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Tales_of_Astonia_jar</output-path>
+    <root id="archive" name="Tales-of-Astonia.jar">
+      <element id="module-output" name="Project-Gaia-3d" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/lwjgl_util.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/lwjgl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/slick-util.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

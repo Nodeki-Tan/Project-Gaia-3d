@@ -1,0 +1,35 @@
+#version 150
+
+in ivec3 data;
+
+out vec2 textureCoords;
+out float textureSlot;
+out float frame;
+
+uniform mat4 projectionViewMatrix;
+
+void main(void){
+
+	int position = data.x;
+	float x = (position >> 0) & 0xff;
+	float z = (position >> 8) & 0xff;
+	float y = (position >> 16) & 0xffff;
+	
+	int uvft = data.y;
+	float u = (uvft >> 0) & 0xff;
+	float v = (uvft >> 8) & 0xff;
+	float f = (uvft >> 16) & 0xff;
+	float t = (uvft >> 24) & 0xff;
+	
+	int color = data.z;
+	float r = (color >> 0) & 0xff;
+	float g = (color >> 8) & 0xff;
+	float b = (color >> 16) & 0xff;
+	float a = (color >> 24) & 0xff;
+
+	textureCoords = vec2(u,v);
+	frame = f;
+	textureSlot = t;
+	gl_Position = projectionViewMatrix * vec4(x, y, z, 1.0);
+	
+}

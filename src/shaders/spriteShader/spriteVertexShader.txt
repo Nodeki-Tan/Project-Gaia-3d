@@ -1,0 +1,19 @@
+#version 150
+
+in vec3 position;
+in float frame;
+in float textureSlot;
+in mat4 transformationMatrix;
+
+out float _frame;
+out float _textureSlot;
+out mat4 _transformationMatrix;
+
+void main(void){
+
+	_transformationMatrix = transformationMatrix;
+	_frame = frame;
+	_textureSlot = textureSlot;
+	gl_Position = vec4(position,1.0);
+	
+}

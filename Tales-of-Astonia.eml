@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="azul-16" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="lwjgl_util.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/jars/lwjgl_util.jar!/"/>
+	</lib>
+	<lib name="lwjgl.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/jars/lwjgl.jar!/"/>
+	</lib>
+	<lib name="slick-util.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/jars/slick-util.jar!/"/>
+	</lib>
+	<levels>
+		<level name="natives" value="project"/>
+		<level name="jars" value="project"/>
+	</levels>
+</component>

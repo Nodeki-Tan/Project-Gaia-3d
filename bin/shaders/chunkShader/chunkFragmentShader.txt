@@ -1,0 +1,93 @@
+#version 150 
+
+in vec2 textureCoords;
+in float textureSlot;
+in float frame;
+
+out vec4 out_Colour;
+
+uniform sampler2D textureSampler[16];
+
+void main(void){
+
+	float x,y;
+	x = (textureCoords.x /(2048 / (16))) + (frame / (2048 / (16)));
+	y = (textureCoords.y /(2048 / (16))) + (frame / (2048 / ((16) * (2048 / (16)))));
+
+	vec4 textureColour;
+
+    switch (int(textureSlot)) {
+
+            case 0:
+                textureColour = texture(textureSampler[0], vec2(x,y));
+            break;
+
+            case 1:
+                textureColour = texture(textureSampler[1], vec2(x,y));
+            break;
+
+            case 2:
+                textureColour = texture(textureSampler[2], vec2(x,y));
+            break;
+
+            case 3:
+                textureColour = texture(textureSampler[3], vec2(x,y));
+            break;
+
+            case 4:
+                textureColour = texture(textureSampler[4], vec2(x,y));
+            break;
+
+            case 5:
+                textureColour = texture(textureSampler[5], vec2(x,y));
+            break;
+
+            case 6:
+                textureColour = texture(textureSampler[6], vec2(x,y));
+            break;
+
+            case 7:
+                textureColour = texture(textureSampler[7], vec2(x,y));
+            break;
+
+            case 8:
+                textureColour = texture(textureSampler[8], vec2(x,y));
+            break;
+
+            case 9:
+                textureColour = texture(textureSampler[9], vec2(x,y));
+            break;
+
+            case 10:
+                textureColour = texture(textureSampler[10], vec2(x,y));
+            break;
+
+            case 11:
+                textureColour = texture(textureSampler[11], vec2(x,y));
+            break;
+
+            case 12:
+                textureColour = texture(textureSampler[12], vec2(x,y));
+            break;
+
+            case 13:
+                textureColour = texture(textureSampler[13], vec2(x,y));
+            break;
+
+            case 14:
+                textureColour = texture(textureSampler[14], vec2(x,y));
+            break;
+
+            case 15:
+                textureColour = texture(textureSampler[15], vec2(x,y));
+            break;
+
+        }
+    
+	if(textureColour.a < 0.5){
+		discard;
+	}
+	
+	out_Colour = textureColour;
+
+}
