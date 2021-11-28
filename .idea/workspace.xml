@@ -42,7 +42,7 @@
       <recent name="$PROJECT_DIR$/libs/jars" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Gaia Linux">
+  <component name="RunManager" selected="Application.Gaia Windows">
     <configuration name="Gaia Linux" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="azul-16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -54,11 +54,11 @@
       </method>
     </configuration>
     <configuration name="Gaia Windows" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH" value="azul-16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="core.RenderCore" />
       <module name="Project-Gaia-3d" />
-      <option name="VM_PARAMETERS" value="-Djava.library.path=libs/natives/windows/" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=libs/native/windows/" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

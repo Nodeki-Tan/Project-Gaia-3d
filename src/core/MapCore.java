@@ -35,11 +35,11 @@ public class MapCore implements Runnable{
 	public static boolean paused = false;
 	public static boolean running = false;
 	
-	public static final int CHUNK_WIDTH = 16;
+	public static final int CHUNK_WIDTH = 32;
 
 	public static final int CHUNK_VIEW_HEIGHT = 512 / CHUNK_WIDTH;
 
-	public static final int CHUNK_VIEW_DISTANCE = 16;
+	public static final int CHUNK_VIEW_DISTANCE = 10;
 	public static final int CHUNK_LOAD_DISTANCE = CHUNK_VIEW_DISTANCE + 2;
 	
 	private final static Map<String,Chunk> mapData = new ConcurrentHashMap<>();
@@ -501,7 +501,7 @@ public class MapCore implements Runnable{
 				heightData.remove("" + x + "_" + z + "");
 				biomeData.remove("" + x + "_" + z + "");
 				mapData.remove("" + x + "_" + y + "_" + z + "");
-				//System.out.println("destroyed chunk");
+				System.out.println("destroyed chunk");
 
 			}
 
